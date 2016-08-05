@@ -9,6 +9,6 @@ $(document).ready(function(){
   $("#github-username").submit(function(event){
     event.preventDefault();
     var username = ($("#username").val());
-    publicRepositories.repoRequest(username, publicReposNameAndDescription);  
+    publicRepositories.repoRequest(username, publicReposNameAndDescription);
   });
 });
