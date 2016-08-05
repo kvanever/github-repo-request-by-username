@@ -1,6 +1,6 @@
 # GitHub Repo Request by Username
 
-#### This is the week one Epicodus JS class project focused on node.js project setup and API request management. Current as of August 5, 2016
+#### This is the week one Epicodus JS class project focused on node.js project setup and API request management. This website allows the user to enter a GitHub username into a form, submit it, and see names and descriptions of that username's public repositories.  Current as of August 5, 2016
 
 #### By Kevin VanEvery
 
@@ -22,6 +22,7 @@ This project meets the following specs
 
 To install this repository
 
+* clone directory to local
 * ``` $ npm install ``` to pull dependencies listed in package.json
 * ``` $ bower install ``` to pull dependencies listed in bower.json
 * You'll need to create an .env file and pull an API Key from Github in order to run this code locally
