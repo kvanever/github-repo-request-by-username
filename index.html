@@ -17,7 +17,15 @@
       <header>
         <h1>Github Repo Request by Username</h1>
       </header>
-      <div class="output">
+      <form id="github-username">
+        <div class="form-group">
+          <label for="blank">Please enter a GitHub username to view a list of public repositories and descriptions for that user.</label>
+          <input type="text" class="form-control" id="username" placeholder="Please enter a username">
+        </div>
+        <button type="submit" name="button">Submit</button>
+      </form>
+      <div id="repo-request-return">
+
       </div>
     </div>
   </body>
