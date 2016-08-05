@@ -1,7 +1,14 @@
 var PublicRepositoriesByUsernameRequest = require('./../js/github-repo-request-by-username-model.js').publicRepositoriesByUsernameRequestModule;
 
-var publicReposNameAndDescription = function(repo) {
-  $('#repo-request-return').append("<ul><li>" + repo.name + "</li><li>" + repo.description + "</li></ul>");
+var publicRepositoriesNameAndDescription = function(repository) {
+
+  if (repository.description === null || repository.description === "") {
+    var unwrappedRepositoryDescription = "No Description Provided";
+  } else {
+    var unwrappedRepositoryDescription = repository.description;
+  }
+
+  $('#repository-request-return table tbody').append("<tr><td>" + repository.name + "</td><td>" + unwrappedRepositoryDescription + "</td></tr>");
 };
 
 $(document).ready(function(){
@@ -9,6 +16,6 @@ $(document).ready(function(){
   $("#github-username").submit(function(event){
     event.preventDefault();
     var username = ($("#username").val());
-    publicRepositoriesByUsername.apiRequest(username, publicReposNameAndDescription);
+    publicRepositoriesByUsername.apiRequest(username, publicRepositoriesNameAndDescription);
   });
 });
