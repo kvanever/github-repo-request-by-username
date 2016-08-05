@@ -1,12 +1,15 @@
 var apiKey = require('./../.env').apiKey;
 
-var RepoRequest = function(username) {
+PublicRepositories = function(){};
+
+PublicRepositories.prototype.repoRequest = function(username, publicReposNameAndDescription) {
   $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey).then(function(response){
-    console.log(response);
-    return response;
+    for(i = 0; i < response.length; i++){
+      publicReposNameAndDescription(response[i]);
+    }
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
 };
 
-exports.repoRequestModule = RepoRequest;
+exports.publicRepositoriesModule = PublicRepositories;
