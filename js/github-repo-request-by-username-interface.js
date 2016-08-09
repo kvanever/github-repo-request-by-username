@@ -7,7 +7,6 @@ var publicRepositoriesNameAndDescription = function(repository) {
   } else {
     var unwrappedRepositoryDescription = repository.description;
   }
-
   $('#repository-request-return table tbody').append("<tr><td>" + repository.name + "</td><td>" + unwrappedRepositoryDescription + "</td></tr>");
 };
 
@@ -16,6 +15,7 @@ $(document).ready(function(){
   $("#github-username").submit(function(event){
     event.preventDefault();
     var username = ($("#username").val());
+    $('#repository-request-return table tbody').empty();
     publicRepositoriesByUsername.apiRequest(username, publicRepositoriesNameAndDescription);
   });
 });

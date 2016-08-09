@@ -23,9 +23,11 @@ This project meets the following specs
 To install this repository
 
 * clone directory to local
+* you'll need npm, bower, sass, and gulp installed
 * ``` $ npm install ``` to pull dependencies listed in package.json
 * ``` $ bower install ``` to pull dependencies listed in bower.json
-* You'll need to create an .env file and pull an API Key from Github in order to run this code locally
+* You'll need to create an .env file and pull an API Key from Github in order to run this code locally.  Export the key using ``` exports.apiKey = “your key here”; ```
+* ``` $ gulp serve ``` will launch the app in localhost.
 
 ## Known Bugs
 
